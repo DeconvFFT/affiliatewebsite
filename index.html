@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lists and Links</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        a:link {
+          color: green;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        
+        a:visited {
+          color: pink;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        
+        a:hover {
+          color: red;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+        
+        a:active {
+          color: yellow;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+        </style>
+    
+  </head>
+  <body>
+  <div id="input"></div>
+  <ul id="myUl"></ul>
+
+  </body>
+  <script>
+    var list = [
+{
+    id: 1,
+    title: "Stevia",
+    link: "https://amzn.to/2HQCJRj"
+},
+{
+    id: 2,
+    title: "Stevia",
+    link: "https://amzn.to/2HQCJRj"
+},
+{
+    id: 3,
+    title: "Stevia",
+    link: "https://amzn.to/2HQCJRj"
+}
+];
+
+var array = ["slide 1", "slide 2", "slide 3", "slide 4", "slide 5"]
+
+list.forEach(function(item) {
+  var li = document.createElement("li");
+    var a = document.createElement('a');
+    a.href = item.link;
+    a.text = item.title;
+  li.appendChild(a);
+  document.getElementById("myUl").appendChild(li);
+});
+</script>
+</html>
